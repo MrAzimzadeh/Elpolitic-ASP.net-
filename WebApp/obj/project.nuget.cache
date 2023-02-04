@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QcngkZbH4zOXlkuJtKnJypp1XOfqNu9LEW9WFibb9nMue078titRn5utscqV9ulvmdg6sUBqg/Sr4g74ERuoUg==",
+  "dgSpecHash": "qcEXkQ8Ej1cuIUgqqNcEsPS1aecKroHik8smVtCb9er61NdwI2Ivvi/bUJVqHcCGpVT+WSb3pyVhU6QljdSgQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\WebApp\\WebApp.csproj",
+  "projectFilePath": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\Elpolitic-ASP.net\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mehem\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mehem\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
