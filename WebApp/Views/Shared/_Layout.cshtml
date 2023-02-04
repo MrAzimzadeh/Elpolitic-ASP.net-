@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>ELPolitic - Responsive HTML5 OnePage Template</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Colors CSS -->
+    
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="politics_version">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>  
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div class="topbar text-center hidden-xs">
+        <p>This site uses cookies. By continuing to browse ELPolitic, you are agreeing to use our site cookies. <a href="#">Find out more here ></a></p>
+    </div>
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/logo.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a data-scroll-nav="0" href="#main-banner" class="active">Home</a></li>
+                        <li><a data-scroll-nav="1" href="#about">About Us</a></li>
+                        <li><a data-scroll-nav="2" href="#issues">Issues</a></li>
+                        <li><a data-scroll-nav="3" href="#event">Event</a></li>
+						<li><a data-scroll-nav="4" href="#gallery">Gallery</a></li>
+                        <li><a data-scroll-nav="5" href="#media">Multimedia</a></li>
+						<li><a data-scroll-nav="6" href="#blog">Blog</a></li>
+                        <li><a data-scroll-nav="7" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	@RenderBody()
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">About</a>
+                        <a href="#">Faq</a>
+                        <a href="#">Contact</a>
+                    </p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Elpolitic</a> Design By : 
+					<a href="https://html.design/">html design</a></p>
+                </div>
+
+                <div class="footer-right">
+                    <form method="get" action="#">
+                        <input placeholder="Subscribe our newsletter.." name="search">
+                        <i class="fa fa-envelope-o"></i>
+                    </form>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+	<!-- Camera Slider -->
+	<script src="js/jquery.mobile.customized.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script> 
+	<script src="js/camera.min.js"></script>
+	<script src="js/scrollIt.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.vide.js"></script>
+
+</body>
+</html>
