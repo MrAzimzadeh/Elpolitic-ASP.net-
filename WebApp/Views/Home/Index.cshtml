@@ -22,7 +22,7 @@
             @foreach (var who in Model.Whos)
             {
             <div class="col-md-6">
-                
+
                 <div class="message-box">
                     <h2>@who.Title</h2>
                     <blockquote class="lead">@who.SubTitle</blockquote>
@@ -53,22 +53,24 @@
         <hr class="hr1">
 
         <div class="row text-center">
-            @* foreach bura yazilacaq  *@
+            @* foreach bura yazilacaq *@
+            @foreach (var about in Model.Abouts)
+            {
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="service-widget">
                     <div class="post-media_pp wow fadeIn">
-                        <a href="uploads/politic_01.jpg" data-rel="prettyPhoto[gal]"
+                        <a href="uploads/@about.PhotoUrl" data-rel="prettyPhoto[gal]"
                             class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/politic_01.jpg" alt="" class="img-responsive">
+                        <img src="uploads/@about.PhotoUrl" alt="" class="img-responsive">
                         <div class="hover-up">
-                            <h3>Let's work for a better future</h3>
-                            <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est,
-                                convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
+                            <h3>@about.Title</h3>
+                            <p>@about.SubTitle</p>
                         </div>
                     </div>
-
+            
                 </div><!-- end service -->
             </div>
+            }
         </div>
     </div><!-- end row -->
 </div><!-- end container -->
@@ -87,16 +89,17 @@
         </div><!-- end title -->
 
         <div class="row">
+            
             <div class="col-md-5">
                 <div class="issuse-wrap2 clearfix">
-                    <img src="uploads/about_04.jpg" alt="" class="img-responsive img-rounded">
-                    <h4>"Turkey will continue to make structural economic reforms”</h4>
-                    <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget
-                        quam. Integer ultricies et magna quis.</p>
-                    <p>Tiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.
+                    <img src="uploads/@Model.Issues.PhotoUrl" alt="" class="img-responsive img-rounded">
+                    <h4>"@Model.Issues.Title”</h4>
+                    <p>
+                        @Model.Issues.Content
                     </p>
                 </div><!-- end issue -->
             </div><!-- end col -->
+            
             <div class="col-md-7">
                 <div class="issuse-wrap clearfix">
                     <img src="uploads/issue_01.jpg" alt="" class="img-responsive img-rounded alignleft">

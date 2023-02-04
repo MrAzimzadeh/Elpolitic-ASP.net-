@@ -13,4 +13,20 @@ SELECT TOP (1000) [Id]
   INSERT INTO Whos
   VALUES 
   ('Title' , 'Subtitleasdnakfnjdmnjsdfnmsd' , 'dwa ygbcha nskfjb dj chnbkbahdcfjndhfjsdngoskdmnoikscml;oslkmcv' , 'about_04.png', 'https://youtu.be/R0Z0mPZn57k' )
-  SELECT * FROM Whos
+ INSERT INTO Abouts
+ VALUES
+ ('qaqa' , 'sdfsidgfjsdgiuosdjfjdsgksfjkl' , 'politic_01.jpg'), 
+ ('okokok' , 'sdfsidgfjsdgiuosdjfjdsgksfjkl' , 'politic_02.jpg'), 
+ ('fdsbfn' , 'sdfsidgfjsdgiuosdjfjdsgksfjkl' , 'politic_03.jpg'), 
+ ('fdsf' , 'sdfsidgfjsdgiuosdjfjdsgksfjkl' , 'politic_04.jpg'), 
+ ('23wesd' , 'sdfsidgfjsdgiuosdjfjdsgksfjkl' , 'politic_05.jpg'),
+ ('ae5rtf' , 'sdfsidgfjsdgiuosdjfjdsgksfjkl' , 'politic_06.jpg')
+
+ INSERT INTO Issues
+ VALUES
+('about_04.jpg' , 'adsdsasa' , 'aifehsdkh ntesuhnxdiusjfnusxdhgnxsuijgnmxcgijmsnimcfjmsd,mxadnmcfnamcnf'),
+('about_04.jpg' , 'asdsad' , 'sdfa,.df10155185212 ntesuhnxdiusjfnusxdhgnxsuijgnmxcgijmsnimcfjmsd,mxadnmcfnamcnf')
+
+  
+  
+SELECT * FROM Issues

@@ -20,11 +20,15 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         var slide = _context.Banners.ToList();
-        var who = _context.Whos.OrderBy(x=>x.Id).ToList();
+        var who = _context.Whos.OrderBy(x => x.Id).ToList();
+        var about = _context.Abouts.ToList();
+        var issu = _context.Issues.OrderByDescending(x => x.Id).First();
         HomeVM homeVM = new()
         {
             Banners = slide,
-            Whos = who
+            Whos = who,
+            Abouts = about,
+            Issues = issu
         };
         return View(homeVM);
     }
