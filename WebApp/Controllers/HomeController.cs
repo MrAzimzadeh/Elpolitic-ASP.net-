@@ -1,21 +1,32 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Data;
 using WebApp.Models;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly AppDbContext _context;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var slide = _context.Banners.ToList();
+        var who = _context.Whos.OrderBy(x=>x.Id).ToList();
+        HomeVM homeVM = new()
+        {
+            Banners = slide,
+            Whos = who
+        };
+        return View(homeVM);
     }
 
     public IActionResult Privacy()
