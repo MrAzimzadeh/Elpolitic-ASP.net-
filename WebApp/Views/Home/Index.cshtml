@@ -3,15 +3,15 @@
 <div id="main-banner" class="banner-one" data-scroll-index="0">
     @foreach (var slide in Model.Banners)
     {
-        <div data-src="uploads/@slide.PhotoUrl">
-            <div class="camera_caption">
-                <div class="container">
-                    <h1 class="wow fadeInUp animated">@slide.Title</h1>
-                    <p class="wow fadeInUp animated" data-wow-delay="0.2s">@slide.SubTitle</p>
-                    <a data-scroll href="#" class="btn btn-light btn-radius btn-brd grd1">DONATE</a>
-                </div> <!-- /.container -->
-            </div> <!-- /.camera_caption -->
-        </div>
+    <div data-src="uploads/@slide.PhotoUrl">
+        <div class="camera_caption">
+            <div class="container">
+                <h1 class="wow fadeInUp animated">@slide.Title</h1>
+                <p class="wow fadeInUp animated" data-wow-delay="0.2s">@slide.SubTitle</p>
+                <a data-scroll href="#" class="btn btn-light btn-radius btn-brd grd1">DONATE</a>
+            </div> <!-- /.container -->
+        </div> <!-- /.camera_caption -->
+    </div>
     }
 </div> <!-- /#theme-main-banner -->
 
@@ -21,9 +21,8 @@
 
             @foreach (var who in Model.Whos)
             {
-                
-            
             <div class="col-md-6">
+                
                 <div class="message-box">
                     <h2>@who.Title</h2>
                     <blockquote class="lead">@who.SubTitle</blockquote>
@@ -35,21 +34,26 @@
 
                     <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1">Learn More</a>
                 </div><!-- end messagebox -->
-            </div><!-- end col -->
-            
+            </div>
+
+            <!-- end col -->
+
             <div class="col-md-6">
                 <div class="post-media wow fadeIn">
                     <img src="uploads/@who.Photo" alt="" class="img-responsive img-rounded">
-                    <a href="@who.PhotoUrl" data-rel="prettyPhoto[gal]"
-                        class="playbutton"><i class="flaticon-play-button"></i></a>
+                    <a href="@who.PhotoUrl" data-rel="prettyPhoto[gal]" class="playbutton"><i
+                            class="flaticon-play-button"></i></a>
                 </div><!-- end media -->
-            </div><!-- end col -->
+            </div>
+
+            <!-- end col -->
             }
-            </div><!-- end row -->
-            
+        </div><!-- end row -->
+
         <hr class="hr1">
 
         <div class="row text-center">
+            @* foreach bura yazilacaq  *@
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="service-widget">
                     <div class="post-media_pp wow fadeIn">
@@ -65,55 +69,9 @@
 
                 </div><!-- end service -->
             </div>
-
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="service-widget">
-                    <div class="post-media_pp wow fadeIn">
-                        <a href="uploads/politic_02.jpg" data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/politic_02.jpg" alt="" class="img-responsive">
-                        <div class="hover-up">
-                            <h3>Parliament building was renovated</h3>
-                            <p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo
-                                rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
-                        </div>
-                    </div>
-
-                </div><!-- end service -->
-            </div>
-
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="service-widget">
-                    <div class="post-media_pp wow fadeIn">
-                        <a href="uploads/politic_03.jpg" data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/politic_03.jpg" alt="" class="img-responsive">
-                        <div class="hover-up">
-                            <h3>Start new legislative year</h3>
-                            <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa
-                                sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                        </div>
-                    </div>
-
-                </div><!-- end service -->
-            </div>
-
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="service-widget">
-                    <div class="post-media_pp wow fadeIn">
-                        <a href="uploads/politic_02.jpg" data-rel="prettyPhoto[gal]"
-                            class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/politic_02.jpg" alt="" class="img-responsive">
-                        <div class="hover-up">
-                            <h3>Parliament building was renovated</h3>
-                            <p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo
-                                rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
-                        </div>
-                    </div>
-                </div><!-- end service -->
-            </div>
-        </div><!-- end row -->
-    </div><!-- end container -->
+        </div>
+    </div><!-- end row -->
+</div><!-- end container -->
 </div><!-- end section -->
 
 <div class="section nopad">
