@@ -136,11 +136,13 @@
         </div><!-- end title -->
 
         <div class="row">
+            @foreach (var events in Model.Events)
+            {
             <div class="col-md-4">
                 <div class="participate-wrap">
-                    <small>Technology</small>
+                    <small>@events.HeadText</small>
                     <figure>
-                        <img src="uploads/politic_04.jpg" alt="" class="img-responsive">
+                        <img src="uploads/@events.PhotoUrl" alt="" class="img-responsive">
                         <figcaption>
                             <a href="#" class="global-radius">
                                 <i class="flaticon-unlink"></i>
@@ -148,92 +150,26 @@
                         </figcaption>
                     </figure>
                     <div class="event_dit">
-                        <h4>Integer sollicitudin metus</h4>
+                        <h4>@events.Title</h4>
                         <ul>
                             <li>
-                                <a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a>
+                                <a href="#"> <i class="fa fa-calendar"></i> @events.PublishDate.ToString(" dd-MM-yyyy") </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a>
+                                <a href="#"> <i class="fa fa-clock-o"></i> @events.PublishDate.ToString("hh : mm : ss")</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a>
+                                <a href="#"> <i class="fa fa-map-marker"></i> @events.Location </a>
                             </li>
                         </ul>
                         <p>
-                            Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at
-                            eget quam. Integer ultricies et magna quis.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facilis at voluptatibus quod quia quam ipsam repellendus magnam magni consequuntur.
                         </p>
                         <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a>
                     </div>
                 </div><!-- end participate -->
             </div><!-- end col -->
-
-            <div class="col-md-4">
-                <div class="participate-wrap">
-                    <small>Let's Speak with Us</small>
-                    <figure>
-                        <img src="uploads/politic_05.jpg" alt="" class="img-responsive">
-                        <figcaption>
-                            <a href="#" class="global-radius">
-                                <i class="flaticon-unlink"></i>
-                            </a>
-                        </figcaption>
-                    </figure>
-                    <div class="event_dit">
-                        <h4>Integer facilisis elit</h4>
-                        <ul>
-                            <li>
-                                <a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a>
-                            </li>
-                            <li>
-                                <a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a>
-                            </li>
-                            <li>
-                                <a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a>
-                            </li>
-                        </ul>
-                        <p>
-                            Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at
-                            eget quam. Integer ultricies et magna quis.
-                        </p>
-                        <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a>
-                    </div>
-                </div><!-- end participate -->
-            </div><!-- end col -->
-
-            <div class="col-md-4">
-                <div class="participate-wrap">
-                    <small>Join Us for Free</small>
-                    <figure>
-                        <img src="uploads/politic_06.jpg" alt="" class="img-responsive">
-                        <figcaption>
-                            <a href="#" class="global-radius">
-                                <i class="flaticon-unlink"></i>
-                            </a>
-                        </figcaption>
-                    </figure>
-                    <div class="event_dit">
-                        <h4>Maecenas bibendum tellus</h4>
-                        <ul>
-                            <li>
-                                <a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a>
-                            </li>
-                            <li>
-                                <a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a>
-                            </li>
-                            <li>
-                                <a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a>
-                            </li>
-                        </ul>
-                        <p>
-                            Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at
-                            eget quam. Integer ultricies et magna quis.
-                        </p>
-                        <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a>
-                    </div>
-                </div><!-- end participate -->
-            </div><!-- end col -->
+            }
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end section -->

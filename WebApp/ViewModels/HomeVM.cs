@@ -9,6 +9,7 @@ namespace WebApp.ViewModels
         public List<About> Abouts { get; set; }
         public Issues Issues { get; set; }
         public List<Plans> Plans { get; set; }
+        public List<Events> Events { get; set; }
     }
 
 }
