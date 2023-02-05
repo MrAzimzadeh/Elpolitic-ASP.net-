@@ -61,12 +61,12 @@
             @* foreach bura yazilacaq *@
             @foreach (var about in Model.Abouts)
             {
-                <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="service-widget">
                         <div class="post-media_pp wow fadeIn">
                             <a href="uploads/@about.PhotoUrl" data-rel="prettyPhoto[gal]"
                                class="hoverbutton global-radius">
-                                <i class="flaticon-unlink"></i>
+                                <i class="flaticon-unlink[]"></i>
                             </a>
                             <img src="uploads/@about.PhotoUrl" alt="" class="img-responsive">
                             <div class="hover-up">
@@ -74,10 +74,9 @@
                                 <p>@about.SubTitle</p>
                             </div>
                         </div>
-
                     </div><!-- end service -->
                 </div>
-            }
+                }
         </div>
     </div><!-- end row -->
 </div><!-- end container -->
