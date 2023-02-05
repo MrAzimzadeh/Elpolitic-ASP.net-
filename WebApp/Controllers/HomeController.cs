@@ -23,12 +23,14 @@ public class HomeController : Controller
         var who = _context.Whos.OrderBy(x => x.Id).ToList();
         var about = _context.Abouts.ToList();
         var issu = _context.Issues.OrderByDescending(x => x.Id).First();
+        var plan = _context.Plans.OrderByDescending(x=>x.Id).ToList();
         HomeVM homeVM = new()
         {
             Banners = slide,
             Whos = who,
             Abouts = about,
-            Issues = issu
+            Issues = issu,
+            Plans = plan
         };
         return View(homeVM);
     }

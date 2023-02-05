@@ -110,14 +110,16 @@
             </div><!-- end col -->
 
             <div class="col-md-7">
+                @foreach (var plan in Model.Plans.Take(3))
+                {                
                 <div class="issuse-wrap clearfix">
-                    <img src="uploads/issue_01.jpg" alt="" class="img-responsive img-rounded alignleft">
-                    <h4>CLIMATE CHANGE</h4>
+                    <img src="uploads/@plan.PhotoUrl" alt="" class="img-responsive img-rounded alignleft">
+                    <h4>@plan.Title</h4>
                     <p>
-                        Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget
-                        quam. Integer ultricies et magna quis.
+                        @plan.Content
                     </p>
                 </div><!-- end issue -->
+                }
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->

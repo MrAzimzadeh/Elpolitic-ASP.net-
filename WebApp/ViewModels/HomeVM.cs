@@ -8,6 +8,7 @@ namespace WebApp.ViewModels
         public List<Who> Whos { get; set; }
         public List<About> Abouts { get; set; }
         public Issues Issues { get; set; }
+        public List<Plans> Plans { get; set; }
     }
 
 }

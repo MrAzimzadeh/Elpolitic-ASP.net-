@@ -109,6 +109,10 @@
       "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
+      "Id": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\Elpolitic-ASP.net\\WebApp\\wwwroot\\image.png",
+      "PackagePath": "staticwebassets\\image.png"
+    },
+    {
       "Id": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\Elpolitic-ASP.net\\WebApp\\wwwroot\\images\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\images\\ajax-loader.gif"
     },

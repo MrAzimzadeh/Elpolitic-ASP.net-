@@ -26,6 +26,3 @@ SELECT TOP (1000) [Id]
  VALUES
 ('about_04.jpg' , 'adsdsasa' , 'aifehsdkh ntesuhnxdiusjfnusxdhgnxsuijgnmxcgijmsnimcfjmsd,mxadnmcfnamcnf'),
 ('about_04.jpg' , 'asdsad' , 'sdfa,.df10155185212 ntesuhnxdiusjfnusxdhgnxsuijgnmxcgijmsnimcfjmsd,mxadnmcfnamcnf')
-
-  
-SELECT * FROM Issues

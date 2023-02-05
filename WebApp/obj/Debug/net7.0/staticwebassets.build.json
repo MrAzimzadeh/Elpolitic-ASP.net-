@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eVsAoGQbMF7YxwqiUSszS8e6h3VmL1d2ep23xEbNlSA=",
+  "Hash": "eYCUpBaViuBUFgd2f7YjWHwibB2oXUsPvvTdZBRbrH0=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -491,6 +491,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\Elpolitic-ASP.net\\WebApp\\wwwroot\\image.png",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\Elpolitic-ASP.net\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image.png"
     },
     {
       "Identity": "C:\\Users\\mehem\\OneDrive\\Desktop\\ComparAcademy\\NewGroup\\ASP.NET\\All-Project\\Elpolitic-NoAdmin\\Elpolitic-ASP.net\\WebApp\\wwwroot\\images\\ajax-loader.gif",
