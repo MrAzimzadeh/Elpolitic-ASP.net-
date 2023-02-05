@@ -28,5 +28,4 @@ SELECT TOP (1000) [Id]
 ('about_04.jpg' , 'asdsad' , 'sdfa,.df10155185212 ntesuhnxdiusjfnusxdhgnxsuijgnmxcgijmsnimcfjmsd,mxadnmcfnamcnf')
 
   
-  
 SELECT * FROM Issues
