@@ -15,6 +15,8 @@ namespace WebApp.Data
         public DbSet<Issues> Issues { get; set; }
         public DbSet<Plans> Plans { get; set; }
         public DbSet<Who> Whos { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<GaleryCategory> GaleryCategories { get; set; }
         
     }
 }

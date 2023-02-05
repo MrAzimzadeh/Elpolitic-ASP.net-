@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApp.Data;
 
@@ -11,9 +12,11 @@ using WebApp.Data;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230205102928_AddCategory")]
+    partial class AddCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,7 +121,7 @@ namespace WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("WebApp.Models.Contact", b =>
@@ -202,6 +205,9 @@ namespace WebApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -212,33 +218,9 @@ namespace WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Galeries");
-                });
-
-            modelBuilder.Entity("WebApp.Models.GaleryCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GaleryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GalleryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("GaleryId");
-
-                    b.ToTable("GaleryCategories");
+                    b.ToTable("Galeries");
                 });
 
             modelBuilder.Entity("WebApp.Models.Issues", b =>
@@ -324,33 +306,20 @@ namespace WebApp.Migrations
                     b.ToTable("Whos");
                 });
 
-            modelBuilder.Entity("WebApp.Models.GaleryCategory", b =>
+            modelBuilder.Entity("WebApp.Models.Galery", b =>
                 {
                     b.HasOne("WebApp.Models.Category", "Category")
-                        .WithMany("GaleryCategories")
+                        .WithMany("Galeries")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebApp.Models.Galery", "Galery")
-                        .WithMany("GaleryCategories")
-                        .HasForeignKey("GaleryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Category");
-
-                    b.Navigation("Galery");
                 });
 
             modelBuilder.Entity("WebApp.Models.Category", b =>
                 {
-                    b.Navigation("GaleryCategories");
-                });
-
-            modelBuilder.Entity("WebApp.Models.Galery", b =>
-                {
-                    b.Navigation("GaleryCategories");
+                    b.Navigation("Galeries");
                 });
 #pragma warning restore 612, 618
         }

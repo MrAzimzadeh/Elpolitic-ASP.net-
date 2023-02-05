@@ -44,8 +44,7 @@
                     <div class="post-media wow fadeIn">
                         <img src="uploads/@who.Photo" alt="" class="img-responsive img-rounded">
                         <a href="@who.PhotoUrl" data-rel="prettyPhoto[gal]" class="playbutton">
-                            <i
-                                class="flaticon-play-button">
+                            <i class="flaticon-play-button">
                             </i>
                         </a>
                     </div><!-- end media -->
@@ -61,11 +60,11 @@
             @* foreach bura yazilacaq *@
             @foreach (var about in Model.Abouts)
             {
-            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="service-widget">
                         <div class="post-media_pp wow fadeIn">
                             <a href="uploads/@about.PhotoUrl" data-rel="prettyPhoto[gal]"
-                               class="hoverbutton global-radius">
+                           class="hoverbutton global-radius">
                                 <i class="flaticon-unlink[]"></i>
                             </a>
                             <img src="uploads/@about.PhotoUrl" alt="" class="img-responsive">
@@ -76,7 +75,7 @@
                         </div>
                     </div><!-- end service -->
                 </div>
-                }
+            }
         </div>
     </div><!-- end row -->
 </div><!-- end container -->
@@ -110,14 +109,16 @@
 
             <div class="col-md-7">
                 @foreach (var plan in Model.Plans.Take(3))
-                {                
-                <div class="issuse-wrap clearfix">
-                    <img src="uploads/@plan.PhotoUrl" alt="" class="img-responsive img-rounded alignleft">
-                    <h4>@plan.Title</h4>
-                    <p>
-                        @plan.Content
-                    </p>
-                </div><!-- end issue -->
+                {
+                    <div class="issuse-wrap clearfix">
+                        <img src="uploads/@plan.PhotoUrl" alt="" class="img-responsive img-rounded alignleft">
+                        <h4>@plan.Title</h4>
+                        <p>
+                            @plan.Content
+                        </p>
+                    </div>
+
+                    <!-- end issue -->
                 }
             </div><!-- end col -->
         </div><!-- end row -->
@@ -137,37 +138,39 @@
         <div class="row">
             @foreach (var events in Model.Events)
             {
-            <div class="col-md-4">
-                <div class="participate-wrap">
-                    <small>@events.HeadText</small>
-                    <figure>
-                        <img src="uploads/@events.PhotoUrl" alt="" class="img-responsive">
-                        <figcaption>
-                            <a href="#" class="global-radius">
-                                <i class="flaticon-unlink"></i>
-                            </a>
-                        </figcaption>
-                    </figure>
-                    <div class="event_dit">
-                        <h4>@events.Title</h4>
-                        <ul>
-                            <li>
-                                <a href="#"> <i class="fa fa-calendar"></i> @events.PublishDate.ToString(" dd-MM-yyyy") </a>
-                            </li>
-                            <li>
-                                <a href="#"> <i class="fa fa-clock-o"></i> @events.PublishDate.ToString("hh : mm : ss")</a>
-                            </li>
-                            <li>
-                                <a href="#"> <i class="fa fa-map-marker"></i> @events.Location </a>
-                            </li>
-                        </ul>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facilis at voluptatibus quod quia quam ipsam repellendus magnam magni consequuntur.
-                        </p>
-                        <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a>
-                    </div>
-                </div><!-- end participate -->
-            </div><!-- end col -->
+                <div class="col-md-4">
+                    <div class="participate-wrap">
+                        <small>@events.HeadText</small>
+                        <figure>
+                            <img src="uploads/@events.PhotoUrl" alt="" class="img-responsive">
+                            <figcaption>
+                                <a href="#" class="global-radius">
+                                    <i class="flaticon-unlink"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <div class="event_dit">
+                            <h4>@events.Title</h4>
+                            <ul>
+                                <li>
+                                    <a href="#"> <i class="fa fa-calendar"></i> @events.PublishDate.ToString(" dd-MM-yyyy") </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-clock-o"></i> @events.PublishDate.ToString("hh : mm : ss")</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-map-marker"></i> @events.Location </a>
+                                </li>
+                            </ul>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facilis at voluptatibus quod quia quam ipsam repellendus magnam magni consequuntur.
+                            </p>
+                            <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">Detail</a>
+                        </div>
+                    </div><!-- end participate -->
+                </div>
+
+                <!-- end col -->
             }
         </div><!-- end row -->
     </div><!-- end container -->
@@ -195,84 +198,24 @@
                 </div>
             </div>
         </div>
-
         <div class="gallery-list row">
-            <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-                <div class="gallery-single fix">
-                    <img src="uploads/gallery_img-01.jpg" class="img-responsive" alt="Image">
-                    <div class="img-overlay">
-                        <a href="uploads/gallery_img-01.jpg" data-rel="prettyPhoto[gal]"
-                           class="hoverbutton global-radius">
-                            <i class="flaticon-unlink"></i>
-                        </a>
+            @foreach (var gallery in Model.Galery)
+            {
+                <div class="col-md-4 col-sm-6 gallery-grid @string.Join(" ", gallery.GaleryCategories.Select(x => x.Category.Name))">
+                    <div class="gallery-single fix">
+                        <img src="uploads/@gallery.PhotoUrl" class="img-responsive" alt="Image">
+                        <div class="img-overlay">
+                            <a href="uploads/@gallery.PhotoUrl" data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius">
+                                <i class="flaticon-unlink"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-                <div class="gallery-single fix">
-                    <img src="uploads/gallery_img-02.jpg" class="img-responsive" alt="Image">
-                    <div class="img-overlay">
-                        <a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]"
-                           class="hoverbutton global-radius">
-                            <i class="flaticon-unlink"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-                <div class="gallery-single fix">
-                    <img src="uploads/gallery_img-03.jpg" class="img-responsive" alt="Image">
-                    <div class="img-overlay">
-                        <a href="uploads/gallery_img-03.jpg" data-rel="prettyPhoto[gal]"
-                           class="hoverbutton global-radius">
-                            <i class="flaticon-unlink"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-                <div class="gallery-single fix">
-                    <img src="uploads/gallery_img-04.jpg" class="img-responsive" alt="Image">
-                    <div class="img-overlay">
-                        <a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]"
-                           class="hoverbutton global-radius">
-                            <i class="flaticon-unlink"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-                <div class="gallery-single fix">
-                    <img src="uploads/gallery_img-05.jpg" class="img-responsive" alt="Image">
-                    <div class="img-overlay">
-                        <a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]"
-                           class="hoverbutton global-radius">
-                            <i class="flaticon-unlink"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_d">
-                <div class="gallery-single fix">
-                    <img src="uploads/gallery_img-06.jpg" class="img-responsive" alt="Image">
-                    <div class="img-overlay">
-                        <a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]"
-                           class="hoverbutton global-radius">
-                            <i class="flaticon-unlink"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
-
-
 <div id="media" data-scroll-index="5" class="section wb">
     <div class="container">
         <div class="section-title text-center">
@@ -353,7 +296,7 @@
             <div class="col-md-4 col-sm-6 col-lg-4">
                 <div class="post-box">
                     <div class="post-thumb">
-                        <img src="uploads/politic_04.jpg" class="img-responsive" alt="post-img"/>
+                        <img src="uploads/politic_04.jpg" class="img-responsive" alt="post-img" />
                         <div class="date">
                             <span>06</span>
                             <span>Aug</span>
@@ -380,7 +323,7 @@
             <div class="col-md-4 col-sm-6 col-lg-4">
                 <div class="post-box">
                     <div class="post-thumb">
-                        <img src="uploads/politic_05.jpg" class="img-responsive" alt="post-img"/>
+                        <img src="uploads/politic_05.jpg" class="img-responsive" alt="post-img" />
                         <div class="date">
                             <span>06</span>
                             <span>Aug</span>
@@ -407,7 +350,7 @@
             <div class="col-md-4 col-sm-6 col-lg-4">
                 <div class="post-box">
                     <div class="post-thumb">
-                        <img src="uploads/politic_06.jpg" class="img-responsive" alt="post-img"/>
+                        <img src="uploads/politic_06.jpg" class="img-responsive" alt="post-img" />
                         <div class="date">
                             <span>06</span>
                             <span>Aug</span>
@@ -450,27 +393,27 @@
             <div class="col-md-12">
                 <div class="contact_form">
                     <div id="message"></div>
-                    <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                    <form  method="post" class="row" asp-controller="Home" asp-action="Index">
                         <fieldset class="row-fluid">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="first_name" id="first_name" class="form-control"
+                                <input type="text" name="UserName" id="first_name" class="form-control"
                                        placeholder="First Name">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="last_name" id="last_name" class="form-control"
+                                <input type="text" name="UserLastName" id="last_name" class="form-control"
                                        placeholder="Last Name">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="email" name="email" id="email" class="form-control"
+                                <input type="email" name="UserEmail" id="email" class="form-control"
                                        placeholder="Your Email">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" id="phone" class="form-control"
+                                <input type="text" name="UserPhone" id="phone" class="form-control"
                                        placeholder="Your Phone">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <label class="sr-only">Select Service</label>
-                                <select name="select_service" id="select_service" class="selectpicker form-control"
+                                <select name="DonateText" id="select_service" class="selectpicker form-control"
                                         data-style="btn-white">
                                     <option value="12">Donate For?</option>
                                     <option value="Political Parties">Political Parties</option>
@@ -480,7 +423,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <label class="sr-only">What is max price?</label>
-                                <select name="select_price" id="select_price" class="selectpicker form-control"
+                                <select name="DonatePrice" id="select_price" class="selectpicker form-control"
                                         data-style="btn-white">
                                     <option value="$100 - $2000">$10 - $100</option>
                                     <option value="$2000 - $4000">$100 - $1000</option>
@@ -488,8 +431,8 @@
                                 </select>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <textarea class="form-control" name="comments" id="comments" rows="6"
-                                    placeholder="Why you are donate us?"></textarea>
+                                <textarea class="form-control" name="UserMessage" id="comments" rows="6"
+                                          placeholder="Why you are donate us?"></textarea>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
                                 <button type="submit" value="SEND" id="submit"

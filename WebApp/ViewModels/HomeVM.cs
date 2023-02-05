@@ -1,5 +1,4 @@
 using WebApp.Models;
-
 namespace WebApp.ViewModels
 {
     public class HomeVM
@@ -10,6 +9,8 @@ namespace WebApp.ViewModels
         public Issues Issues { get; set; }
         public List<Plans> Plans { get; set; }
         public List<Events> Events { get; set; }
+        public  List<Galery> Galery { get; set; }
+
     }
 
 }
